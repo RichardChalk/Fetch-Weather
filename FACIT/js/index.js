@@ -30,9 +30,21 @@ document.getElementById("getWeatherButton").addEventListener("click", () => {
     .then((data) => {
       const temperature = data.main.temp;
       const location = data.name;
-      document.getElementById(
-        "weatherInfo"
-      ).innerHTML = `Temperaturen i ${location} är ${temperature}°C.`;
+
+      // ==========================================================================
+      // ÖVNING: Använda ternär operator för att bestämma textfärg baserat på temperaturen
+      const color = temperature <= 0 ? "blue" : "red";
+
+      // Ange textfärgen och innehållet för elementet som visar väderinformationen
+      const weatherInfoElement = document.getElementById("weatherInfo");
+      weatherInfoElement.innerHTML = `Temperaturen i ${location} är ${temperature}°C.`;
+      // Sätter textfärgen
+      weatherInfoElement.style.color = color;
+      // ==========================================================================
+
+      // document.getElementById(
+      //   "weatherInfo"
+      // ).innerHTML = `Temperaturen i ${location} är ${temperature}°C.`;
     })
     // Om något går fel någonstans i anropskedjan
     // (t.ex. nätverksproblem eller fel på API-servern),
