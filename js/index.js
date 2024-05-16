@@ -9,9 +9,12 @@ document.getElementById("getWeatherButton").addEventListener("click", () => {
   const city = "Stockholm";
   const url = `${apiUrl}?q=${city}&appid=${apiKey}&units=metric&lang=sv`;
 
+  // Test me i din browser! (byt ut nyckeln)
+  // https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=xxxxxxxxxxxxxxxxxxx&units=metric&lang=sv
+
   // fetch är en funktion för att göra webbanrop.
   // Den tar URL:en vi just byggt och skickar en förfrågan till OpenWeatherMap API.
-  fetch(url)
+  https: fetch(url)
     // När vi får ett svar (response) från API:et,
     // kontrollerar vi först att svaret är "ok".
     // Om inte, kastar vi (throw) ett fel.
