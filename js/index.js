@@ -5,7 +5,7 @@ document.getElementById("getWeatherButton").addEventListener("click", () => {
   const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
   // Uppdatera nyckel med din egen
-  const apiKey = "xxxxxxxxxxxxxxxxxxx";
+  const apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
   const city = "Stockholm";
   const url = `${apiUrl}?q=${city}&appid=${apiKey}&units=metric&lang=sv`;
 
